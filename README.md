@@ -72,8 +72,7 @@ Tests were not updated to support sweetalert2. PRs are welcome.
 
 ## License
 
-MIT © [C.T. Lin](https://github.com/alex-shamshurin/sweetalert2-react)
-
+MIT
 
 [npm-url]: https://npmjs.org/package/sweetalert2-react
 [travis-image]: https://img.shields.io/travis/alex-shamshurin/sweetalert2-react.svg?style=flat-square
