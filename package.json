@@ -1,26 +1,11 @@
 {
   "name": "sweetalert2-react",
   "version": "0.7.1",
-  "description": "Declarative SweetAlert 2 in React",
+  "description": "SweetAlert2 in React",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": "alex-shamshurin/sweetalert2-react",
-  "scripts": {
-    "clean": "rimraf lib dist coverage",
-    "lint": "eslint .",
-    "test": "jest",
-    "test:watch": "yarn test -- --watch",
-    "test:cov": "yarn test -- --coverage",
-    "check": "yarn run lint && yarn run test",
-    "build:lib": "babel src --out-dir lib --ignore __tests__",
-    "build:umd": "webpack src/index.js dist/sweetalert-react.js --config webpack.config.development.js",
-    "build:umd:min": "webpack src/index.js dist/sweetalert-react.min.js --config webpack.config.production.js",
-    "build": "yarn run clean && yarn run build:lib && yarn run build:umd && yarn run build:umd:min",
-    "preversion": "yarn run clean && yarn run check",
-    "version": "yarn run build",
-    "postversion": "git push && git push --tags && yarn run clean",
-    "prepublish": "yarn run clean && yarn run build"
-  },
+  "scripts": {},
   "author": {
     "name": "Shamshurin Alexander",
     "email": "shamshurin.alexander@gmail.com",
@@ -51,8 +36,10 @@
     "enzyme": "^3.3.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-jsx-control-statements": "^2.2.0",
     "eslint-plugin-react": "^7.7.0",
     "jest-cli": "^22.4.2",
     "react": "^16.2.0",
@@ -62,9 +49,11 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
+    "eslint-plugin-flowtype": "^2.46.1",
     "lodash.pick": "^4.4.0",
     "mousetrap": "^1.6.0",
     "prop-types": "^15.0.0",
+    "react-hot-loader": "^4.0.0",
     "sweetalert2": "^7.15.1",
     "warning": "^3.0.0"
   },
