@@ -7,5 +7,5 @@ import { log } from './utils'
 const webpackConfig = webpackConfigFactory(process.env.APP_MODE)
 console.log('webpack config: ', webpackConfig)
 const compiler = webpack(webpackConfig)
-// console.log('compiler', compiler)
+console.log('compiler', compiler)
 

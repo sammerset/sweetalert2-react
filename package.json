@@ -7,6 +7,7 @@
   "repository": "alex-shamshurin/sweetalert2-react",
   "scripts": {
     "dev": "babel-node scripts/development",
+    "build:gh-pages": "babel-node scripts/gh-pages",
     "dev11:build": "webpack --config webpack.config.dev.js",
     "dev11": "run-p dev:build && webpack-serve --config webpack.config.dev.js"
   },
