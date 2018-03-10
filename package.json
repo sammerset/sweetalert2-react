@@ -5,69 +5,77 @@
   "main": "lib/index.js",
   "license": "MIT",
   "repository": "alex-shamshurin/sweetalert2-react",
-  "scripts": {},
+  "scripts": {
+    "dev": "babel-node scripts/development",
+    "dev11:build": "webpack --config webpack.config.dev.js",
+    "dev11": "run-p dev:build && webpack-serve --config webpack.config.dev.js"
+  },
   "author": {
     "name": "Shamshurin Alexander",
     "email": "shamshurin.alexander@gmail.com",
     "url": "github.com/alex-shamshurin/sweetalert2-react"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6"
   },
   "files": [
     "lib/"
   ],
+  "serve": {
+    "dev": {
+      "publicPath": "/gh-pages/"
+    }
+  },
+
   "keywords": [
     "alert",
     "sweetalert",
+    "sweetalert2",
+    "swal",
     "react",
     "component",
     "react-component"
   ],
+  "dependencies": {
+    "lodash.pick": "^4.4.0",
+    "mousetrap": "^1.6.0",
+    "prop-types": "^15.0.0",
+    "sweetalert2": "^7.15.1",
+    "warning": "^3.0.0"
+  },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
+    "app-root-dir": "^1.0.2",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
-    "babel-jest": "^22.4.1",
-    "babel-loader": "^6.2.10",
-    "babel-polyfill": "^6.20.0",
-    "babel-preset-latest": "^6.16.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-2": "^6.18.0",
-    "enzyme": "^3.3.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "bluebird": "^3.5.1",
+    "colors": "^1.2.0",
+    "cross-env": "^5.1.4",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-jsx-control-statements": "^2.2.0",
     "eslint-plugin-react": "^7.7.0",
-    "jest-cli": "^22.4.2",
-    "react": "^16.2.0",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^16.2.0",
-    "rimraf": "^2.5.4",
-    "webpack": "^1.14.0"
-  },
-  "dependencies": {
-    "eslint-plugin-flowtype": "^2.46.1",
-    "lodash.pick": "^4.4.0",
-    "mousetrap": "^1.6.0",
-    "prop-types": "^15.0.0",
+    "node-notifier": "^5.2.1",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-hot-loader": "^4.0.0",
-    "sweetalert2": "^7.15.1",
-    "warning": "^3.0.0"
+    "react-interactive": "^0.8.1",
+    "react-router-dom": "^4.2.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-serve": "^0.2.0",
+    "yarn": "^1.5.1"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
-  },
-  "jest": {
-    "verbose": true,
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/lib"
-    ]
   }
 }
