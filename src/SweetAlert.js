@@ -184,6 +184,7 @@ export const withSwalInstance = swalInstance =>
           .fire({
             ...pick(props, ALLOWS_KEYS),
             ...OVERWRITE_PROPS,
+            onOpen: () => { this._show = true },
           })
           .then(
             () => {
@@ -193,7 +194,7 @@ export const withSwalInstance = swalInstance =>
               this.handleClickCancel(onCancel, dismiss);
             },
           );
-        this._show = true;
+        //this._show = true;
         if (onEscapeKey) this.bindEscapeKey(onEscapeKey);
       } else {
         this.handleClose(onClose);
